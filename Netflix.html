@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Netflix.css">
+    <title>Netflix Clone</title>
+</head>
+<body>
+    <section class="hero">
+        <div class="overlay"></div>
+        <div class="content">
+            <h1>Unlimited maovies, TV shows, and more</h1>
+            <p>Watch anywhere. Cancel anytime.</p>
+            <form>
+                <input type="email" placeholder="Enter your email">
+                <button type="submit">Get Started</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="trending">
+        <h2>Trending Now</h2>
+        <div class="movie-carousal">
+            <div class="movie-item" onclick="showMovieDetails('Oppenheimer', '7.8', 'Action, Crime', '2022', 'img/movie1.jpeg',  'https://www.primevideo.com/detail/amzn1.dv.gti.0653d989-0412-4e01-b466-f657bf48121e')">
+                <img src="img/movie1.jpeg" alt="Oppenheimer">
+                <span>1</span>
+            </div>
+            <div class="movie-item" onclick="showMovieDetails('The Batman', '8.3', 'Drama, Biography', '2023', 'img/movie2.jpeg',  'https://www.primevideo.com/detail/amzn1.dv.gti.f50f8c44-66ba-4e83-94bb-82fb40c52159')">
+                <img src="img/movie2.jpeg" alt="The Batman">
+                <span>2</span>
+            </div>
+            <div class="movie-item" onclick="showMovieDetails('Avatar: The Way of Water', '7.5', 'Adventure, Fantasy', '2022', 'img/movie3.jpeg',  'https://www.primevideo.com/detail/amzn1.dv.gti.bd543411-c8ba-4a90-b8c6-fe74d37e5477')">
+                <img src="img/movie3.jpeg" alt="Avatar: The Way of Water">
+                <span>3</span>
+            </div>
+            <div class="movie-item" onclick="showMovieDetails('Aladdin', '6.9', 'Adventure, Musical', '2019', 'img/movie4.jpeg',  'https://www.primevideo.com/detail/amzn1.dv.gti.62b73882-27b0-7697-2f39-99be2291fc16')">
+                <img src="img/movie4.jpeg" alt="Aladdin">
+                <span>4</span>
+            </div>
+            <div class="movie-item" onclick="showMovieDetails('Thor: Ragnarok', '7.9', 'Superhero, sci-fi', '2017', 'img/movie5.jpeg',  'https://www.primevideo.com/detail/amzn1.dv.gti.2cb82d10-673e-80c9-5ea2-2cd5a4dcfaa9')">
+                <img src="img/movie5.jpeg" alt="Thor: Ragnarok">
+                <span>5</span>
+            </div>
+            <div class="movie-item" onclick="showMovieDetails('Wednesday', '8.1', 'Fantasy, Comedy', '2022 ', 'img/movie6.avif',  'https://www.netflix.com/in/title/81231974?source=imdb')">
+                <img src="img/movie6.avif" alt="Wednesday">
+                <span>6</span>
+            </div>
+            <div class="movie-item" onclick="showMovieDetails('The Witcher', '8.0', 'Action, Adventure', '2019', 'img/movie7.jpeg',  'https://www.netflix.com/in/title/80189685?source=imdb')">
+                <img src="img/movie7.jpeg" alt="The Witcher">
+                <span>7</span>
+            </div>
+            <div class="movie-item" onclick="showMovieDetails('Money Heist', '8.2', 'Action, Mystery', '2017', 'img/movie8.jpg',  'https://www.netflix.com/in/title/80192098?source=imdb')">
+                <img src="img/movie8.jpg" alt="Money Heist">
+                <span>8</span>
+            </div>
+            <div class="movie-item" onclick="showMovieDetails('Dark', '8.7', 'Psychological Thriller, Suspence Mystery, Time travel', '2017', 'img/movie9.jpg',  'https://www.netflix.com/in/title/80100172?source=imdb')">
+                <img src="img/movie9.jpg" alt="Dark">
+                <span>9</span>
+            </div>
+            <div class="movie-item" onclick="showMovieDetails('Squid Game', '8.0', 'Conspiracy Thriller, dark Comedy', '2023', 'img/movie10.jpeg',  'https://www.netflix.com/in/title/81040344?source=imdb')">
+                <img src="img/movie10.jpeg" alt="Squid Game">
+                <span>10</span>
+            </div>
+            <div class="movie-item" onclick="showMovieDetails('One Piece', '9.0', 'Anime, Adventure', '1999', 'img/movie11.jpeg',  'https://www.netflix.com/in/title/80107103?source=imdb')">
+                <img src="img/image11.jpeg" alt="One Piece">
+                <span>11</span>
+            </div>
+        </div>
+
+
+        <div id="movieModal" class="modal">
+            <div class="modal-content">
+              <img id="movieImage" src="" alt="Movie Poster"> <!-- Full-screen background image -->
+              <div class="modal-overlay"></div> <!-- Dark overlay -->
+              <div class="modal-details">
+                <button class="close" onclick="closeModal()">&times;</button>
+                <h1 id="movieTitle"></h1>
+                <p><strong>IMDb Score:</strong> <span id="movieImdb"></span></p>
+                <p><strong>Genre:</strong> <span id="movieGenre"></span></p>
+                <p><strong>Release Year:</strong> <span id="movieYear"></span></p>
+                <a id="movieLink" href="#" target="_blank" class="movie-link-btn">Watch Now</a> <!-- Netflix Link -->
+              </div>
+            </div>
+          </div>
+          
+    </section>
+
+    <section class="reasons">
+        <h2>Reasons to Choose Netflix</h2>
+        <div class="reasons-grid">
+          <div class="reason-box">
+            <h3>Wide Variety of Content</h3>
+            <p>Enjoy a large library of movies, TV shows, documentaries, and more from various genres.</p>
+          </div>
+          <div class="reason-box">
+            <h3>Watch Anywhere</h3>
+            <p>Stream content on your phone, tablet, smart TV, laptop, or streaming device without interruptions.</p>
+          </div>
+          <div class="reason-box">
+            <h3>Affordable Plans</h3>
+            <p>Flexible pricing options for every budget with no hidden fees or contracts.</p>
+          </div>
+          <div class="reason-box">
+            <h3>Family Friendly</h3>
+            <p>Netflix offers a dedicated kids section with parental controls for worry-free streaming.</p>
+          </div>
+        </div>
+      </section>
+      
+
+    <section class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <div class="question">What is Netflix?<span class="toggle">+</span></div>
+            <div class="answer">Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more.</div>
+          </div>
+          <div class="faq-item">
+            <div class="question">How much does Netflix cost?<span class="toggle">+</span></div>
+            <div class="answer">Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device for one fixed monthly fee. Plans range from $9.99 to $19.99 a month.</div>
+          </div>
+          <div class="faq-item">
+            <div class="question">Where can I watch?<span class="toggle">+</span></div>
+            <div class="answer">Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com.</div>
+          </div>
+          <div class="faq-item">
+            <div class="question">How do I cancel?<span class="toggle">+</span></div>
+            <div class="answer">Netflix is flexible. There are no pesky contracts and no commitments. You can easily cancel your account online in two clicks.</div>
+          </div>
+          <div class="faq-item">
+            <div class="question">What can I watch on Netflix?<span class="toggle">+</span></div>
+            <div class="answer">Netflix has an extensive library of feature films, documentaries, TV shows, anime, and more.</div>
+          </div>
+          <div class="faq-item">
+            <div class="question">Is Netflix good for kids?<span class="toggle">+</span></div>
+            <div class="answer">The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly shows.</div>
+          </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Netflix Clone</p>
+        <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Privacy</a></li>
+        </ul>
+    </footer>
+
+    <script src="Netflix.js"></script>
+</body>
+</html>
