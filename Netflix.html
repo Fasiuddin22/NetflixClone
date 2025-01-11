@@ -10,7 +10,7 @@
     <section class="hero">
         <div class="overlay"></div>
         <div class="content">
-            <h1>Unlimited maovies, TV shows, and more</h1>
+            <h1>Unlimited movies, TV shows, and more</h1>
             <p>Watch anywhere. Cancel anytime.</p>
             <form>
                 <input type="email" placeholder="Enter your email">
@@ -21,51 +21,55 @@
 
     <section class="trending">
         <h2>Trending Now</h2>
-        <div class="movie-carousal">
-            <div class="movie-item" onclick="showMovieDetails('Oppenheimer', '7.8', 'Action, Crime', '2022', 'img/movie1.jpeg',  'https://www.primevideo.com/detail/amzn1.dv.gti.0653d989-0412-4e01-b466-f657bf48121e')">
-                <img src="img/movie1.jpeg" alt="Oppenheimer">
-                <span>1</span>
+        <div class="movie-carousel-wrapper">
+            <button class="carousel-btn left-btn" onclick="scrollCarousel('left')">&#8249;</button> <!-- Left Arrow -->
+            <div class="movie-carousel">
+                <div class="movie-item" onclick="showMovieDetails('Oppenheimer', '7.8', 'Action, Crime', '2022', 'img/movie1.jpeg',  'https://www.primevideo.com/detail/amzn1.dv.gti.0653d989-0412-4e01-b466-f657bf48121e')">
+                    <img src="img/movie1.jpeg" alt="Oppenheimer">
+                    <span>1</span>
+                </div>
+                <div class="movie-item" onclick="showMovieDetails('The Batman', '8.3', 'Drama, Biography', '2023', 'img/movie2.jpeg',  'https://www.primevideo.com/detail/amzn1.dv.gti.f50f8c44-66ba-4e83-94bb-82fb40c52159')">
+                    <img src="img/movie2.jpeg" alt="The Batman">
+                    <span>2</span>
+                </div>
+                <div class="movie-item" onclick="showMovieDetails('Avatar: The Way of Water', '7.5', 'Adventure, Fantasy', '2022', 'img/movie3.jpeg',  'https://www.primevideo.com/detail/amzn1.dv.gti.bd543411-c8ba-4a90-b8c6-fe74d37e5477')">
+                    <img src="img/movie3.jpeg" alt="Avatar: The Way of Water">
+                    <span>3</span>
+                </div>
+                <div class="movie-item" onclick="showMovieDetails('Aladdin', '6.9', 'Adventure, Musical', '2019', 'img/movie4.jpeg',  'https://www.primevideo.com/detail/amzn1.dv.gti.62b73882-27b0-7697-2f39-99be2291fc16')">
+                    <img src="img/movie4.jpeg" alt="Aladdin">
+                    <span>4</span>
+                </div>
+                <div class="movie-item" onclick="showMovieDetails('Thor: Ragnarok', '7.9', 'Superhero, sci-fi', '2017', 'img/movie5.jpeg',  'https://www.primevideo.com/detail/amzn1.dv.gti.2cb82d10-673e-80c9-5ea2-2cd5a4dcfaa9')">
+                    <img src="img/movie5.jpeg" alt="Thor: Ragnarok">
+                    <span>5</span>
+                </div>
+                <div class="movie-item" onclick="showMovieDetails('Wednesday', '8.1', 'Fantasy, Comedy', '2022 ', 'img/movie6.avif',  'https://www.netflix.com/in/title/81231974?source=imdb')">
+                    <img src="img/movie6.avif" alt="Wednesday">
+                    <span>6</span>
+                </div>
+                <div class="movie-item" onclick="showMovieDetails('The Witcher', '8.0', 'Action, Adventure', '2019', 'img/movie7.jpeg',  'https://www.netflix.com/in/title/80189685?source=imdb')">
+                    <img src="img/movie7.jpeg" alt="The Witcher">
+                    <span>7</span>
+                </div>
+                <div class="movie-item" onclick="showMovieDetails('Money Heist', '8.2', 'Action, Mystery', '2017', 'img/movie8.jpg',  'https://www.netflix.com/in/title/80192098?source=imdb')">
+                    <img src="img/movie8.jpg" alt="Money Heist">
+                    <span>8</span>
+                </div>
+                <div class="movie-item" onclick="showMovieDetails('Dark', '8.7', 'Psychological Thriller, Suspence Mystery, Time travel', '2017', 'img/movie9.jpg',  'https://www.netflix.com/in/title/80100172?source=imdb')">
+                    <img src="img/movie9.jpg" alt="Dark">
+                    <span>9</span>
+                </div>
+                <div class="movie-item" onclick="showMovieDetails('Squid Game', '8.0', 'Conspiracy Thriller, dark Comedy', '2023', 'img/movie10.jpeg',  'https://www.netflix.com/in/title/81040344?source=imdb')">
+                    <img src="img/movie10.jpeg" alt="Squid Game">
+                    <span>10</span>
+                </div>
+                <div class="movie-item" onclick="showMovieDetails('One Piece', '9.0', 'Anime, Adventure', '1999', 'img/image11.jpeg',  'https://www.netflix.com/in/title/80107103?source=imdb')">
+                    <img src="img/image11.jpeg" alt="One Piece">
+                    <span>11</span>
+                </div>
             </div>
-            <div class="movie-item" onclick="showMovieDetails('The Batman', '8.3', 'Drama, Biography', '2023', 'img/movie2.jpeg',  'https://www.primevideo.com/detail/amzn1.dv.gti.f50f8c44-66ba-4e83-94bb-82fb40c52159')">
-                <img src="img/movie2.jpeg" alt="The Batman">
-                <span>2</span>
-            </div>
-            <div class="movie-item" onclick="showMovieDetails('Avatar: The Way of Water', '7.5', 'Adventure, Fantasy', '2022', 'img/movie3.jpeg',  'https://www.primevideo.com/detail/amzn1.dv.gti.bd543411-c8ba-4a90-b8c6-fe74d37e5477')">
-                <img src="img/movie3.jpeg" alt="Avatar: The Way of Water">
-                <span>3</span>
-            </div>
-            <div class="movie-item" onclick="showMovieDetails('Aladdin', '6.9', 'Adventure, Musical', '2019', 'img/movie4.jpeg',  'https://www.primevideo.com/detail/amzn1.dv.gti.62b73882-27b0-7697-2f39-99be2291fc16')">
-                <img src="img/movie4.jpeg" alt="Aladdin">
-                <span>4</span>
-            </div>
-            <div class="movie-item" onclick="showMovieDetails('Thor: Ragnarok', '7.9', 'Superhero, sci-fi', '2017', 'img/movie5.jpeg',  'https://www.primevideo.com/detail/amzn1.dv.gti.2cb82d10-673e-80c9-5ea2-2cd5a4dcfaa9')">
-                <img src="img/movie5.jpeg" alt="Thor: Ragnarok">
-                <span>5</span>
-            </div>
-            <div class="movie-item" onclick="showMovieDetails('Wednesday', '8.1', 'Fantasy, Comedy', '2022 ', 'img/movie6.avif',  'https://www.netflix.com/in/title/81231974?source=imdb')">
-                <img src="img/movie6.avif" alt="Wednesday">
-                <span>6</span>
-            </div>
-            <div class="movie-item" onclick="showMovieDetails('The Witcher', '8.0', 'Action, Adventure', '2019', 'img/movie7.jpeg',  'https://www.netflix.com/in/title/80189685?source=imdb')">
-                <img src="img/movie7.jpeg" alt="The Witcher">
-                <span>7</span>
-            </div>
-            <div class="movie-item" onclick="showMovieDetails('Money Heist', '8.2', 'Action, Mystery', '2017', 'img/movie8.jpg',  'https://www.netflix.com/in/title/80192098?source=imdb')">
-                <img src="img/movie8.jpg" alt="Money Heist">
-                <span>8</span>
-            </div>
-            <div class="movie-item" onclick="showMovieDetails('Dark', '8.7', 'Psychological Thriller, Suspence Mystery, Time travel', '2017', 'img/movie9.jpg',  'https://www.netflix.com/in/title/80100172?source=imdb')">
-                <img src="img/movie9.jpg" alt="Dark">
-                <span>9</span>
-            </div>
-            <div class="movie-item" onclick="showMovieDetails('Squid Game', '8.0', 'Conspiracy Thriller, dark Comedy', '2023', 'img/movie10.jpeg',  'https://www.netflix.com/in/title/81040344?source=imdb')">
-                <img src="img/movie10.jpeg" alt="Squid Game">
-                <span>10</span>
-            </div>
-            <div class="movie-item" onclick="showMovieDetails('One Piece', '9.0', 'Anime, Adventure', '1999', 'img/movie11.jpeg',  'https://www.netflix.com/in/title/80107103?source=imdb')">
-                <img src="img/image11.jpeg" alt="One Piece">
-                <span>11</span>
-            </div>
+            <button class="carousel-btn right-btn" onclick="scrollCarousel('right')">&#8250;</button> <!-- Right Arrow -->
         </div>
 
 
